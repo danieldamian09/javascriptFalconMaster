@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos y Propiedades de los Arrays</title>
+</head>
+<body>
+    <script>
+                // Personas tienes: 4  Contador: 3
+        var amigos = ["Carlos", "Cesar", "Alex", "Manuel"];
+        
+        // para saber cuuantos elementos hay en un Array (array.length):
+                        //document.write( amigos.length );
+        //document.write("tienes " + amigos.length + " amigos" );
+
+                         //  AGREGAR UN ELEMETO A LA ULTIMA POSCICION DEL ARRAY
+
+        //amigos[amigos.length] = "Fernando";
+
+
+                         // OTRA FORMA DE AGRAGAR ELEMENTOS AL FINAL DEL ARRAY MAS PRACTICA
+
+        //amigos.push("Luis", "Fernado", "Oscar");
+
+
+                         //ELIMINAR EL ULTIMO ELEMENTO DEL ARRAY
+        //amigos.pop();
+
+
+                              //JUNTAR DOS ARRAYS DIFERENTES 
+         //var amigos = ["Carlos", "Cesar", "Alex", "Manuel"];
+         //var amigos2 = ["Luis", "Fernando", "Oscar"];
+
+         //var amigos3 = amigos.concat(amigos2);
+         //document.write(amigos3);
+                            //AGREGAR UN NUMERO LETRA CARACTER CON join:
+        
+        // Primera Forma de Mostarlo:
+
+                  //document.write( amigos.join(" : ") );
+
+        // Segunda Forma de Mostarlo
+
+                 //var amigos2 = amigos.join(" | ")
+                 //document.write(amigos2);
+
+        // ORDENAR NUESTROS ELEMENTOS EN UN ARRAY
+
+    //ALFABETICAMENTE
+
+    var ordenados = amigos.sort();
+    document.write(ordenados);
+
+        
+    
+
+
+
+
+    </script>
+    
+</body>
+</html>
