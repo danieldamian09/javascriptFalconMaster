@@ -8,16 +8,20 @@
 <body>
 
     <script>
-        var nombre;
+        var banda;
 
-        nombre = prompt("ingresa tu nombre");
-        edad = prompt("ingresa tu edad");
+        banda = prompt("ingresa su banda favorita");
+        discos = prompt("cuantos discos tiene");
 
-        document.write(nombre + " " + edad);
+        document.write(banda + " " + "tiene" + " "+  discos + " " + "albums");
 
-        console.log(nombre + " " + edad);
+        console.log(banda + " " + "tiene" + " " + discos + " " + "albums");
         
         //alert(nombre);
+        // con la funcion prompt podemos pedir al usuario que ingrese un valor que se almacenara en la variable
+                // importante usar prompt para guardar datos en variables
+        // al actualizar la pagina el dato que se guarda en la variable se pierde
+        // CON EL COMANDO consul.log("variable") puedo mostar el valor de la variable en la consola del navegador
 
     </script>
     
