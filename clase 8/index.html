@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // variables para el ciclo while
+        var dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"];
+        var numeroDias = dias.length - 1;
+        var i = 0;
+
+        // variables para el ciclo do while
+        var bandas = ["Metallica", "Pantera", "AcDc", "Megadeth", "Ozzy", "Sepultura"];
+        var numeroBandas = bandas.length - 1;
+        var b = 0;
+
+        while (i <= numeroDias) {
+            document.write(dias[i] + "<br/>");
+            i++;
+        }
+
+        do {
+            document.write("<br/>" + bandas[b] + "<br/>");
+            b++;
+        } while (b <= numeroBandas);
+
+    </script>
+</body>
+</html>
