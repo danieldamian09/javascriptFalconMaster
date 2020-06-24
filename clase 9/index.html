@@ -16,7 +16,37 @@
         }
 
         // de esta forma le podemos pasar el parametro
-        saludo("Humberto");
+        saludo("Humberto" + "<br/>");
+
+
+
+
+        // podemos agrgar la funcion a una variable asi pemsamos que es un valor
+
+        var suma = function (numero1, numero2) {
+            var numero1 = numero1;
+            var numero2 = numero2;
+
+            return numero1 + numero2;
+        }
+
+        document.write( suma(31,6) );
+
+        document.write("<br/>" + suma(10,60));
+
+
+
+
+        function numeroMaximo(valor1, valor2) {
+            if (valor1<valor2) {
+                return valor2;
+            }else{
+                return valor1;
+            }
+        }
+
+        document.write("<br/>" + "numero mayor: " + numeroMaximo(9,6));
+
 
     </script>
 </body>
