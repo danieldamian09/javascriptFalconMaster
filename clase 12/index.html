@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos y propiedades para Cadenas de Texto</title>
+</head>
+<body>
+    
+
+    <script>
+
+        var texto = "Humberto Rivero";
+
+        var nuevoTexto = texto.length;
+        // el espacio tambien cuenta como un caracter
+        var nuevoTexto = texto.substring(3);
+        // nos corta los primeros caracteres de la cadena de texto segun el numero que le indiquemos en los ()
+        var nuevoTexto = texto.substr(0,8);
+        // podemos incicar en que posicion comienza a cortar los caracteres y en cual termina (comienzo,final)
+        var nuevoTexto = texto.indexOf("o", 9);
+        // nos muestra en que posicion esta una letra especifica, ojo hay diferencia entre mayuscula y miniscula
+        // podemos pasarle un parametro donde puede comenzar a buscar ("caracter", posicion)
+        var nuevoTexto = texto.lastIndexOf("e");
+        // nos permite buscar la posicion de la letra comenzando desde la ultima
+
+        var texto2 = "Carlos Arturo";
+        var nuevoTexto2 = texto2.replace(texto2, "Hola Mundo");
+        var nuevoTexto2 = texto2.toUpperCase();
+        var nuevoTexto2 = texto2.toLowerCase();
+
+
+        document.write(nuevoTexto);
+        document.write(nuevoTexto2);
+    </script>
+</body>
+</html>

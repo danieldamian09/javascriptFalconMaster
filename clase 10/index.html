@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+
+    <form action="">
+        <input type="text" id="numero1">
+        <input type="text" id="numero2">
+        <input type="button" value="sumar" onclick="alert(suma(10,50));">
+    </form>
+
+    <script>
+        // parseInt toma todo lo que esta en ( document.getElementById("numero1").value) y retorna un numero entero
+        // parseFloat toma todo lo que esta en ( document.getElementById("numero1").value) y retorna un numero decimal
+
+        var suma = function (numero1, numero2) {
+            var numero1 = parseFloat( document.getElementById("numero1").value);
+            var numero2 = parseFloat( document.getElementById("numero2").value);
+            var resultado = numero1 + numero2;
+            return resultado;
+        }
+
+    </script>
+</body>
+</html>
