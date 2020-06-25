@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregando Nodos al DOM</title>
+</head>
+<body>
+    <ol id="lista">
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ol>
+    
+    <script>
+        // para crear el elemento (li) utilizamos creatElement
+        var elemento = document.createElement("li"),
+            contenido = document.createTextNode("la etiqueta a utilizar para crear es createTextNode");
+
+            // para juntar el contendi utilizamos variable1.appenChild(variable2) es decir padre.appenChild(hijo)
+            elemento.appendChild(contenido);
+
+            // para mostrar el elemento creado en el DOM:
+            // document.body.appendChild(elemento);
+
+            // para agrgar al final
+            var padre = document.getElementById("lista");
+            padre.appendChild(elemento);
+
+            // hay otra forma tambien que podemos acceder y es por el elemento padre (este es otra forma de traer los elementos padres)
+            var padre = document.getElementsByTagName("li")[0].parentNode;
+            padre.appendChild(elemento);
+
+            // para agregar al principio
+            var padre = document.getElementsByTagName("li")[0].parentNode;
+            // para obtener el padre
+            var primerElemento = document.getElementsByTagName("li")[0];
+            // para obtener el primer elemento donde vamos a insertar (su posicion por eso es como un array)
+            padre.insertBefore(elemento, primerElemento);
+            // para insertar elemento en la posicion [0] ya que lo muestra como un array
+
+    </script>
+</body>
+</html>

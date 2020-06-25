@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Mi sitio Web</h1>
+    <div id="subtitulo"></div>
+    <p>1-Lorem ipsum <b>dolor</b>, sit amet consectetur adipisicing elit. Quas praesentium reiciendis nam tempora officiis
+        nostrum eveniet impedit pariatur corrupti iure ratione veritatis tempore, illo cupiditate explicabo nemo voluptatem
+        accusamus id ut, quam vero nisi alias officia? Unde, doloremque quas. Dolore dolorem vero consequatur ipsam quod
+        itaque iusto sequi, recusandae totam!</p>
+    
+    <p id="segundo">2-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat dignissimos ut et accusamus mollitia
+        fugiat est eligendi eveniet libero natus debitis quidem sunt ex cupiditate non obcaecati impedit excepturi aut
+        asperiores omnis eaque, dolore maiores totam pariatur. Molestiae, cumque non fuga aut, eaque obcaecati cum quis
+        minus, illo necessitatibus perferendis?</p>
+    
+    <p>3-Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eos beatae minima veritatis voluptatum earum tempora
+        accusamus mollitia facere nemo sed itaque cupiditate, magni consequuntur excepturi, fugiat repudiandae quos adipisci
+        atque, ab sunt nihil pariatur? Temporibus natus distinctio autem ut.</p>
+
+        <script>
+            var elementosP = document.getElementsByTagName("p");
+            var segundoParrafo = document.getElementById("segundo");
+
+            // pasos a seguir:
+            // 1-crear el elemento
+            var elemento = document.createElement("h2");
+            // 2-crear un nodo de texto
+            var contenido = document.createTextNode("Este seria el cambio realizado con js");
+            // 3-añadir el nodo de texto al elemento
+            elemento.appendChild(contenido);
+            // 4-agragar atributos al element
+            elemento.setAttribute("align", "center");
+            // 5-agregar el documento al elemento
+            document.getElementById("subtitulo").appendChild(elemento);
+
+
+            // para agrgarlo al final
+            // document.body.appendChild(elemento);
+
+
+        </script>
+</body>
+</html>
