@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificando, Remplazando y Eliminando Nodos del DOM</title>
+</head>
+<body>
+    <ol>
+        <li id="primero">Lorem ipsum dolor sit amet.</li>
+        <li id="segundo">Lorem ipsum dolor sit amet consectetur.</li>
+    </ol>
+
+
+    <script>
+        var primerElemento = document.getElementById("primero");
+        // para acceder a lo que esta dentro del elemento li con el id primero podemos utilizar innerHtml (ojo con esta se ejecuta lo que este en codigo, es decir si agrgamos un etiqueta dentro del texto a cambiar lo ejecuta)
+        primerElemento.innerHTML = "cambio de texto con <i>innerHtml<i/>";
+        // otra forma que podemos utilizar para acceder a lo que esta dentro del elemento es:
+        primerElemento.textContent = "cambio de texto con <i>innerHtml<i/>";
+
+
+    </script>
+</body>
+</html>
