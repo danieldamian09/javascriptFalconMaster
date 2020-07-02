@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso a los atributos del DOM</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: #dddddd;
+            display: inline-block;
+            margin-right: 10px;
+            border: 1px solid #aaaaaa;
+        }
+
+        .azul{
+            background-color: #0074D9;
+            border: 1px solid #000;
+        }
+
+        .rojo{
+            background-color: #FF4136;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <section id="contenedor">
+        <a href="https://www.youtube.com/watch?v=jVYq32sqoXo" id="enlace">Clase 17</a>
+        <div></div>
+        <div></div>
+    </section>
+
+
+    <script>
+        var elemento = document.createElement("div");
+        var padre = document.getElementById("contenedor");
+        var referencia = document.getElementsByTagName("div")[0];
+         // para cambiar el atributo al div
+        elemento.setAttribute("class", "azul");
+        elemento.setAttribute("class", "rojo");
+        // para mostar en la primera posicion dentro del section
+        padre.insertBefore(elemento, referencia);
+
+
+        // para mostrar
+        // document.body.appendChild(elemento);
+
+        // de la siguiente forma podemos acceder al href o id
+        document.getElementById("enlace");
+        document.getElementById("enlace").id;
+        document.getElementById("enlace").href;
+    </script>
+</body>
+</html>

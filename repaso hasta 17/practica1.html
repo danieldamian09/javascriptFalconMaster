@@ -1,0 +1,166 @@
++<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Practica de Todo lo visto hasta la clase 17</h1>
+
+    <script>
+        // clase 1
+        // alert('practica de js');
+
+        // clase 2
+        var nombre;
+        var apellido;
+
+        // nombre = prompt("ingrese su nombre");
+        // apellido = prompt("ingrese su apellido");
+
+        // document.write("bienvenido " + nombre + " " + " " + apellido);
+
+        // clase 3
+        // tipos de datos
+
+        // Float
+        var edad = 36;
+        var operacion = 36 * 2;
+        var numero = 36.8;
+
+        // string
+        var nombre = "Humberto";
+        var nombre2 = "Daniel"
+        var texto = "ghost is heavy metal";
+
+        // array
+        // var cursos = ["js", "CSS", "HTML", "UX/IU", "Bootstrap", "Git", "Angular"];
+        // document.write(cursos[2]);
+
+        // objetos
+        var objeto = {
+            color: "black",
+            size: 12
+        }
+
+        // bolean
+        var bolean = false;
+
+        // arrays
+        var amigos = ["Danie", "Carlos", "Luis"];
+        amigos[0] = "Humberto";
+
+        // clase 5
+        // prpiedades de los array
+        var cursos = ["js", "CSS", "HTML", "UX/IU", "Bootstrap", "Git", "Angular"];
+        // saber cuantos elementos tiene un array
+        // document.write(cursos.length);
+        // agragar elementos ultima posicion dentro del array
+        cursos[cursos.length] = "node.js";
+        // document.write(cursos.length);
+        // otra forma de agragar elemento
+        cursos.push("presupuesto web", "google web desing");
+        // document.write(cursos.length);
+        // eliminar el ultimo elemento del array
+        cursos.pop();
+        // juntar dos array
+        var nuevosCursos = ["wordpress", "react.js", "maquetacion avanzada"];
+        var todosCursos = cursos.concat(nuevosCursos);
+        // document.write(todosCursos);
+        // agragar una letra o un carater con join
+        // document.write(todosCursos.join("|"));
+        // otro metodo de mostarlo
+        var otraFormaDeMostar = todosCursos.join(":");
+        // document.write(otraFormaDeMostar);
+        // ordenar alfabeticamente
+        var cursosOrdenadosAlfabeticamente = todosCursos.sort();
+        document.write(cursosOrdenadosAlfabeticamente);
+
+        // clase 6 condicionales
+        // condicional if
+        var nombre = "Humberto"
+        var edad = 36
+        if (edad >= 18) {
+            document.write( "<br/>" + "Bienvenido tienes 18 años");
+        }else{
+            document.write( "<br/>" + "no tienes 18" );
+        }
+        
+        // var respuesta = prompt("Usted es culpable si o no?");
+
+        // function declaracion() {
+        //     if (respuesta == "si") {
+        //         document.write("<br/>" + "iras a la carcel");
+        //     }else if(respuesta == "no"){
+        //         document.write("<br/>" + "iras a casa");
+        //     }else{
+        //         document.write("<br/>" + "la documetacion por favor");
+        //     }
+        // }
+
+        // declaracion();
+
+            // var topping = prompt("ingrese que topping desea");
+            // var precioSin = 1.90;
+            // var precioOreo = 1;
+            // var precioKit = 1.50;
+            // var precioBrowni = 0.75;
+            // var precioLocasitos = 0.95;
+
+            // function precioTotal() {
+            //     if (topping == "sin topping") {
+            //         document.write("<br/>" + "el precios es " + precioSin);
+            //     }else if (topping == "oreo"){
+            //         document.write("<br/>" + "el precios es " + precioOreo);
+            //     }else if (topping == "kitkat"){
+            //         document.write("<br/>" + "el precios es " + precioKit);
+            //     }else if (topping == "brownie"){
+            //         document.write("<br/>" + "el precios es " + precioBrowni);
+            //     }else if(topping == "lacasitos"){
+            //         document.write("<br/>" + "el precios es " + precioLocasitos);
+            //     }else{
+            //         document.write("<br/>" + "no tenemos este topping, lo sentimos");
+            //     }
+            // }
+
+            // precioTotal();
+
+        // practica 7 ciclo for
+        // escribir varios elementos h con el ciclo for
+        var texto = "este es el cilo for";
+
+        for (i = 0; i <= 6; i++) {
+            document.write("<h" + i + ">" + texto + i + "<h" + 1 + "/>");
+            
+        }
+
+        // contar numero hasta el 50 de 2 en 2
+        for(i = 0; i <= 50; i+=2){
+            document.write(i);
+        }
+
+        // para contar de forma descendente 
+        for (i= 80; i >= 10; i--){
+            document.write("<br/>" + i);
+            }
+
+        // clase 8 ciclo While
+        
+        var numeroE = prompt("ingrese un numero");
+
+        while (numeroE < 10) {
+            document.write("introduzca un numero menor a 10");
+            
+        }
+
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

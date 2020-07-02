@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Segunda Parte de la Practica</h1>
+
+    <p>Escribe un programa que pida al usuario introducir un número entero mayor que 10, el cuadro de texto volverá a aparecer
+    si el número es menor.</p>
+
+    <p>Escribe un programa que pida al usuario introducir un número entero entre 50 y 100, el cuadro de texto volverá a
+    aparecer si el número es menor o mayor.</p>
+
+    <script>
+        // var numeroM = prompt("por favor introduzca un numero mayor a 10");
+        // if (numeroM < 10){
+        //     var numeroM = prompt("el numero no es mayor a 10");
+        // }
+
+            // primer ejercicio
+        // var numeroM = prompt("por favor introduzca un numero mayor a 10");
+        // while (numeroM < 10) {
+        //     var numeroM = prompt("este numero no es mayor a 10");
+        // }
+
+            // segundo ejercicio
+        // var NumMayor = prompt("por favor introduzca un numero entre 50 y 100");
+        // while(NumMayor > 100 || NumMayor < 50){
+        //     var NumMayor = prompt("el valor introduciodo no es correcto");
+        // }
+
+        // var numero = prompt("por favor introduzca un numero para mostar la tabla de multiplicar");
+        // while (numero > 10 || numero < 2) {
+        //     var numero = prompt("por favor introduzca un numero entre 2 y 10");
+        // }
+
+        // while (numero == 2) {
+        //     document.write(numerto * 2);
+        // }
+
+        function tabla() {
+            var numero = prompt("por favor introduzca un numero para mostar la tabla de multiplicar");
+
+
+            while (numero > 10 || numero < 2) {
+                var numero = prompt("por favor introduzca un numero entre 2 y 10");
+            }
+
+            var i = 0;
+            while (i <= 10) {
+                document.write("<br/>" + numero + "*" + i + "=" + numero * i);
+                i++;
+            }
+
+
+        }
+
+        tabla();
+
+        var a = "hola";
+        var b = 1;
+        while (b <= 15) {
+            a = a + "n";
+            document.write("<br/>" + a);
+            b++;
+        }
+
+        var resultado = '';
+        var x = 0;
+        do{
+            x = x + 1;
+            document.write("<br/>" + x);
+            x++;
+        
+        }while (x < 8);
+
+        // funciones 
+        //  crear una funcion que sume 
+
+        var numero1 = Number(prompt("ingrese un numero"));
+        var numero2 = Number(prompt("ingrese otro numero"));
+        var resultado;
+
+        function suma() {
+           resultado = numero1 + numero2;
+           document.write("<br/>" + resultado);
+    }
+
+        suma();
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso de condiciones</title>
+</head>
+
+<body>
+    <h1>Practica de Condicionales</h1>
+
+    <p>1. Pide la edad y si es mayor de 18 años indica que ya puede conducir.</p>
+
+    <p>2. Pide una nota (número). Muestra la calificación según la nota:
+
+        0-3: Muy deficiente
+        3-5: Insuficiente
+        5-6: Suficiente
+        6-7: Bien
+        7-9: Notable
+        9-10: Sobresaliente
+    </p>
+
+    <p>3. Realiza un script que pida cadenas de texto hasta que se pulse “cancelar”. Al salir con “cancelar” deben
+        mostrarse
+        todas las cadenas concatenadas con un guión -.</p>
+
+    <p>4. Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un «alert»
+    y seguir pidiendo. Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.</p>
+
+    <p>5. Realizar una página con un script que calcule el valor de la letra de un número de DNI (Documento nacional de
+    indentidad).</p><br>
+    
+    <p>El algoritmo para calcular la letra del dni es el siguiente :</p><br>
+    
+    <p>El número debe ser entre 0 y 99999999</p>
+    <p>Debemos calcular el resto de la división entera entre el número y el número 23.</p>
+    <p>Según el resultado, de 0 a 22, le corresponderá una letra de las siguientes: (T, R, W, A, G, M, Y, F, P, D, X, B, N, J,
+    Z, S, Q, V, H, L, C, K, E)</p>
+    <p>Si lo introducido no es un número deberá indicarse con un alert y volver a preguntar.</p>
+    <p>Deberá de repetirse el proceso hasta que el usuario pulse «cancelar».</p>
+    
+
+
+    <script>
+        // ejercicio 1
+        // var edad = Number(prompt("por favor ingrese su edad"));
+        // if (edad > 18) {
+        //     document.write("puedes conducir");
+        // }else{
+        //     document.write("no puedes conducir eres menor de edad");
+        // }
+
+
+        // ejercicio 2
+        // var nota = Number(prompt("ingrese su nota"));
+        // if (nota < 3) {
+        //     document.write("muy deficiente");
+        // }else if(nota >= 3 && nota < 5){
+        //     document.write("insuficiente");
+        // } else if (nota >= 5 && nota <= 6) {
+        //     document.write("suficiente");
+        // }else if (nota > 6 && nota <= 7){
+        //     document.write("bien");
+        // }else if (nota > 7 &&  nota <= 9){
+        //     document.write("notable");
+        // }else if (nota == 10){
+        //     document.write("sobresaliente");
+        // }
+
+
+        // ejercicio 3
+        // var texto = "";
+
+        // do {
+        //     var cadena = prompt("por favor introduzca texto");
+
+        //     if (texto == "") {
+        //         texto = texto + cadena;
+        //     } else {
+        //         texto = texto + "-" + cadena;
+        //     }
+        // }
+
+        // while (confirm("desea seguir?")) {
+        //     document.write(texto);
+        // }
+
+
+        // ejercicio 4
+        // var suma = 0;
+        // do{
+        //     var numero = prompt("por favor introduzca un numero");
+        //     if (Number(numero) == numero ) {
+        //         numero = Number(numero);
+        //         suma = suma + numero;
+        //     }else{
+        //         if(numero != undefined){
+        //             alert(numero + " no es un numero")
+        //         }
+        //     }
+        // }
+
+        // while (numero != undefined) {
+        //     document.write(suma);
+        // }
+
+        // ejercicio 5
+        // var restante = 0;
+        // var letra = "";
+        // do {
+        //     var numero = prompt("introduce tu numero de dni");
+        //     if (Number(numero) == numero) {
+        //         numero = Number(numero);
+        //         if (numero >= 0 && numero <= 99999999) {
+        //             restante = numero % 23;
+        //             switch (restante) {
+        //                 case 0:
+        //                     letra = "T"
+        //                     break;
+        //                 case 1:
+        //                     letra = "R"
+        //                     break;
+        //                 case 2:
+        //                     letra = "W"
+        //                     break;
+        //                 case 3:
+        //                     letra = "A"
+        //                     break;
+        //                 case 4:
+        //                     letra = "G"
+        //                     break;
+        //                 case 5:
+        //                     letra = "M"
+        //                     break;
+        //                 case 6:
+        //                     letra = "Y"
+        //                     break;
+        //                 case 7:
+        //                     letra = "F"
+        //                     break;
+        //                 case 8:
+        //                     letra = "P"
+        //                     break;
+        //                 case 9:
+        //                     letra = "D"
+        //                     break;
+        //                 case 10:
+        //                     letra = "X"
+        //                     break;
+        //                 case 11:
+        //                     letra = "B"
+        //                     break;
+        //                 case 12:
+        //                     letra = "N"
+        //                     break;
+        //                 case 13:
+        //                     letra = "J"
+        //                     break;
+        //                 case 14:
+        //                     letra = "Z"
+        //                     break;
+        //                 case 15:
+        //                     letra = "S"
+        //                     break;
+        //                 case 16:
+        //                     letra = "Q"
+        //                     break;
+        //                 case 17:
+        //                     letra = "V"
+        //                     break;
+        //                 case 18:
+        //                     letra = "H"
+        //                     break;
+        //                 case 19:
+        //                     letra = "L"
+        //                     break;
+        //                 case 20:
+        //                     letra = "C"
+        //                     break;
+        //                 case 21:
+        //                     letra = "K"
+        //                     break;
+        //                 case 22:
+        //                     letra = "E"
+        //                     break;
+
+        //                 default:
+        //                     alert("este no es un numero")
+        //                     break;
+        //             }
+        //         }
+        //         alert(" Numero: " + numero + " Letra: " + letra);
+        //     }else{
+        //         if (numero != undefined) {
+        //             alert(numero + " no es un numero");
+        //         }
+        //     }
+        // } while (numero != undefined);
+
+
+
+      
+
+
+    </script>
+</body>
+
+</html>
