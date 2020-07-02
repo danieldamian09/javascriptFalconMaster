@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Practica) Modificando el estilo de los elementos</title>
+
+    <style>
+
+        .thumb {
+            width: 200px;
+            transition: 300ms all ease;
+        }
+    
+        .grande {
+            width: 400px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <form action="">
+        <input type="button" value="cambio de tamaño" onclick="zoom()">
+    </form>
+
+    <img id="thumb" class="thumb" width="400" src="http://lorempixel.com/400/400"/>
+
+    <script>
+        var zoom = function () {
+            var thumb = document.getElementById("thumb")
+            // otra forma es utilizar setAttribute
+            // thumb.setAttribute("class", "thumb grande");
+        
+            if (thumb.className == "thumb") {
+                    thumb.className = "thumb grande";
+            }else{
+                    thumb.className = "thumb";
+            }
+        }
+
+        1138239366
+
+    </script>
+</body>
+</html>

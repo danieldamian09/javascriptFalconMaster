@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificando el estilo de los elementos</title>
+    <style>
+        .thumb{
+            width: 200px;
+            transition: 300ms all ease;
+        }
+
+        .grande{
+            width: 400px;
+        }
+
+        .titulo{
+            border: 1px solid navy;
+            background: #ccc;
+            padding: 10px;
+        }
+
+        .tituloGrande{
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="encabezado" class="titulo">Soy un Encabezado |°°| </h1>
+
+    <script>
+        var encabezado = document.getElementById("encabezado");
+        // formas de cambiar la clase
+        encabezado.className = "tituloGrande";
+        // para agregar las dos clase 
+        encabezado.className = "titulo tituloGrande";
+        // para remplazar una de las dos clases agrgadas
+        encabezado.className = encabezado.className.replace("tituloGrande", "hola");
+
+
+
+
+        // para cambiar los estilos directamente 
+        // encabezado.style.color = "navy";
+        // encabezado.style.background = "green";
+        // encabezado.style.border = "none";
+
+    </script>
+</body>
+</html>
