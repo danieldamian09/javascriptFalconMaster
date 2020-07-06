@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos del DOM</title>
+</head>
+<body>
+    
+    <button id="boton">Boton</button>
+    <input type="text" id="input">
+    <a id="enlace" href="https://www.w3schools.com/jsref/dom_obj_event.asp">Pagina de Eventos HTML</a>
+
+    <script>
+        // vamos a utilizar la funcion autoinvocada por seguridad
+        (function () {
+            
+            var saludo = function (e) {
+                // de esta forma podemos ver de que tipo es el evento con e.type
+                console.log("este evento es de tipo: " + e.type);
+                // de esta forma podemos ver a que elemento HTML se le esta aplicando el evento
+                console.log(e.target);
+            }
+
+            var inputFocus = function () {
+                console.log("focus !");
+            }
+
+            var inputBlur = function () {
+                console.log("blur !");
+            }
+
+            var inputChange = function () {
+                console.log("change !");
+            }
+
+            var enlaceEvent = function (h) {
+                console.log("no enviar a la pagina a la w3schools.com");
+                h.preventDefault();
+            }
+
+            // var saludo2 = function () {
+            //     alert("saludo2");
+            // }
+
+            var boton = document.getElementById("boton");
+            var input = document.getElementById("input");
+            var enlace = document.getElementById("enlace");
+
+            // agregar un evento
+            boton.addEventListener("click", saludo);
+            // boton.addEventListener("click", saludo2);
+
+            // agragr evento al input focus
+            // este evento funciona cuando estamos adentro del input
+            input.addEventListener("focus", inputFocus);
+
+            // agragr evento al input blur
+            // este evento funciona cuando salimos del input
+            input.addEventListener("blur", inputBlur);
+
+             // agragr evento al input change
+            // este evento funciona cuando cambiamos el contendi del input
+            input.addEventListener("change", inputChange);
+
+            // para remover eventos:
+            // de esta forma quitamos el evento "blur" del input
+            input.removeEventListener("blur", inputBlur);
+
+
+            // vamos a trabajar el enlace
+            enlace.addEventListener("click", enlaceEvent);
+
+        }())
+
+    </script>
+</body>
+</html>
