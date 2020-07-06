@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timers, Timeout e Interval</title>
+</head>
+<body>
+    
+
+    <script>
+        (function () {
+            
+            // para llevar la cuenta de cuentas veces se repite la funcion
+            var contador = 0;
+
+            var saludo = function () {
+                contador++;
+                console.log(contador);
+
+            // otra forma de hacer que se repita una funcion
+            setTimeout(saludo, 3000);
+
+
+
+                // para poner un limite al contador y decir donde debe parar
+            //     if (contador === 5) {
+            //         clearInterval(intervalo);
+                // }
+            }
+
+            // llamamos la formula de esta manera creamos un bucle
+            saludo();
+
+            // Timeout
+            // setTimeout(saludo, 5000);
+
+            // Interval
+            // se debe agrgar una variable para poder detener el contador
+            // var intervalo = setInterval(saludo, 3000);
+
+
+
+
+
+        }())
+    </script>
+</body>
+</html>

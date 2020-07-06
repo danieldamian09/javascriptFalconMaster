@@ -7,25 +7,61 @@
 </head>
 <body>
 
-    <form action="recibe.php" name="formulario" method="get" id="formulario">
+    <form action="" name="formulario" method="get" id="formulario">
         <!-- Require todos los campos son obligatorios -->
-        <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre:" required>
+        <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre:">
         <br>
 
-        <input type="radio" name="sexo" id="hombre" value="hombre" required>Hombre
-        <input type="radio" name="sexo" id="mujer" value="mujer" required>Mujer
+        <input type="radio" name="sexo" id="hombre" value="hombre">Hombre
+        <input type="radio" name="sexo" id="mujer" value="mujer">Mujer
         <br>
 
-        <input type="checkbox" name="terminos" id="terminos" required>Terminos y Condiciones
+        <input type="checkbox" name="terminos" id="terminos">Terminos y Condiciones
         <br>
 
-        <input type="submit" id="btn" name="btn" value="Enviar" required>
+        <input type="submit" id="btn" name="btn" value="Enviar">
     </form>
 
 
     <script>
         (function () {
-            var formulario = document.getElementsByName("formulario")
+            var formulario = document.getElementsByName("formulario")[0];
+            var elementos = formulario.elements;
+            var boton = document.getElementById("btn");
+
+            var validarNombre = function (e) {
+                if (formulario.nombre.value == 0) {
+                    alert("por favor coloca tu nombre");
+                    e.preventDefault();
+                }
+            }
+
+            var validarRadio = function (e) {
+                if (formulario.sexo[0].checked == true || formulario.sexo[1].checked == true) {
+                    
+                }else{
+                    alert("completa el campo sexo");
+                    e.preventDefault();
+                }
+            }
+
+            var validarCheckbox = function (e) {
+                if (formulario.terminos.checked == false) {
+                    alert("por favor aceptar terminos y condiciones");
+                    e.preventDefault();
+                }
+            }
+
+            var validar = function (e) {
+                validarNombre(e);
+                validarRadio(e);
+                validarCheckbox(e);
+            };
+
+            formulario.addEventListener("submit", validar);
+
+
+
         }())
     </script>
 </body>
